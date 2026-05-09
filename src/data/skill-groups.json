@@ -1,0 +1,32 @@
+[
+  {
+    "group": "Frontend",
+    "skills": [
+      { "name": "React", "level": "avanzado", "status": "activo", "evidence": "Portfolio apps" },
+      { "name": "Vite", "level": "solido", "status": "activo", "evidence": "Configuración" },
+      { "name": "Tailwind", "level": "avanzado", "status": "activo", "evidence": "Diseño UI" },
+      { "name": "TypeScript", "level": "solido", "status": "activo", "evidence": "Tipado" },
+      { "name": "Astro", "level": "practico", "status": "consolidando", "evidence": "Blog" },
+      { "name": "Next.js", "level": "practico", "status": "consolidando", "evidence": "Proyectos" }
+    ]
+  },
+  {
+    "group": "Backend",
+    "skills": [
+      { "name": "PHP", "level": "solido", "status": "historico", "evidence": "WordPress" },
+      { "name": "Django", "level": "practico", "status": "consolidando", "evidence": "API" },
+      { "name": "REST APIs", "level": "solido", "status": "activo", "evidence": "Desarrollo" },
+      { "name": "Supabase", "level": "solido", "status": "activo", "evidence": "Backend as a service" },
+      { "name": "PostgreSQL", "level": "practico", "status": "activo", "evidence": "Consultas" }
+    ]
+  },
+  {
+    "group": "Automatización / IA",
+    "skills": [
+      { "name": "n8n", "level": "practico", "status": "activo", "evidence": "Workflows" },
+      { "name": "Codex", "level": "solido", "status": "activo", "evidence": "Workflow dev" },
+      { "name": "Gemini CLI", "level": "avanzado", "status": "activo", "evidence": "Asistencia" },
+      { "name": "Agentes", "level": "explorando", "status": "explorando", "evidence": "MCPs" }
+    ]
+  }
+]

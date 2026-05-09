@@ -1,0 +1,66 @@
+import type { IconType } from 'react-icons';
+import {
+  SiAstro,
+  SiCloudflare,
+  SiCodemagic,
+  SiCss,
+  SiDjango,
+  SiDocker,
+  SiFirebase,
+  SiGithub,
+  SiGooglegemini,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiN8N,
+  SiNextdotjs,
+  SiOpenai,
+  SiOpenjdk,
+  SiPhp,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+  SiWoocommerce,
+  SiWordpress,
+} from 'react-icons/si';
+
+export const TECHNOLOGY_ICONS: Record<string, IconType> = {
+  react: SiReact,
+  vite: SiVite,
+  typescript: SiTypescript,
+  javascript: SiJavascript,
+  js: SiJavascript,
+  html: SiHtml5,
+  css: SiCss,
+  tailwind: SiTailwindcss,
+  'tailwind css': SiTailwindcss,
+  astro: SiAstro,
+  'next.js': SiNextdotjs,
+  django: SiDjango,
+  php: SiPhp,
+  python: SiPython,
+  java: SiOpenjdk,
+  wordpress: SiWordpress,
+  woocommerce: SiWoocommerce,
+  supabase: SiSupabase,
+  firebase: SiFirebase,
+  postgresql: SiPostgresql,
+  mysql: SiMysql,
+  docker: SiDocker,
+  cloudflare: SiCloudflare,
+  'gemini cli': SiGooglegemini,
+  codex: SiOpenai,
+  github: SiGithub,
+  n8n: SiN8N,
+  'rest apis': SiCodemagic,
+};
+
+export const normalizeTechnologyName = (value: string) => value.trim().toLowerCase();
+
+export const hasTechnologyIcon = (name: string) => {
+  return Boolean(TECHNOLOGY_ICONS[normalizeTechnologyName(name)]);
+};

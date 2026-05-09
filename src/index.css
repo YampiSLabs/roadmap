@@ -1,0 +1,243 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@layer base {
+  :root,
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+    --page-bg-1: #10151d;
+    --page-bg-2: #0d1219;
+    --page-bg-3: #0b1016;
+    --page-radial-a: rgba(45, 212, 191, 0.08);
+    --page-radial-b: rgba(148, 163, 184, 0.08);
+    --selection-bg: rgba(59, 130, 246, 0.35);
+
+    --shell-glow-a: rgba(59, 130, 246, 0.1);
+    --shell-glow-b: rgba(34, 211, 238, 0.08);
+
+    --glass-bg: rgba(20, 26, 36, 0.82);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 28px -24px rgba(15, 23, 42, 0.9);
+
+    --chrome-bg: rgba(12, 17, 24, 0.85);
+    --chrome-border: rgba(255, 255, 255, 0.1);
+    --footer-bg: rgba(12, 17, 24, 0.9);
+    --footer-border: rgba(255, 255, 255, 0.08);
+
+    --icon-button-bg: rgba(255, 255, 255, 0.05);
+    --icon-button-border: rgba(255, 255, 255, 0.12);
+    --icon-button-border-hover: rgba(255, 255, 255, 0.25);
+
+    --floating-bg: rgba(16, 23, 35, 0.92);
+    --floating-border: rgba(255, 255, 255, 0.14);
+    --floating-bg-hover: rgba(20, 32, 49, 1);
+    --floating-border-hover: rgba(255, 255, 255, 0.25);
+  }
+
+  :root[data-theme='neon'] {
+    color-scheme: dark;
+    --page-bg-1: #13102a;
+    --page-bg-2: #111226;
+    --page-bg-3: #0d1220;
+    --page-radial-a: rgba(236, 72, 153, 0.16);
+    --page-radial-b: rgba(34, 211, 238, 0.14);
+    --selection-bg: rgba(139, 92, 246, 0.45);
+
+    --shell-glow-a: rgba(236, 72, 153, 0.2);
+    --shell-glow-b: rgba(34, 211, 238, 0.16);
+
+    --glass-bg: rgba(28, 22, 44, 0.86);
+    --glass-border: rgba(139, 92, 246, 0.24);
+    --glass-shadow: 0 10px 34px -26px rgba(0, 0, 0, 0.95);
+
+    --chrome-bg: rgba(22, 18, 36, 0.87);
+    --chrome-border: rgba(139, 92, 246, 0.32);
+    --footer-bg: rgba(20, 16, 34, 0.91);
+    --footer-border: rgba(139, 92, 246, 0.24);
+
+    --icon-button-bg: rgba(139, 92, 246, 0.18);
+    --icon-button-border: rgba(139, 92, 246, 0.34);
+    --icon-button-border-hover: rgba(45, 212, 191, 0.5);
+
+    --floating-bg: rgba(31, 24, 49, 0.92);
+    --floating-border: rgba(139, 92, 246, 0.36);
+    --floating-bg-hover: rgba(35, 26, 56, 1);
+    --floating-border-hover: rgba(45, 212, 191, 0.5);
+  }
+
+  html {
+    font-size: clamp(17px, 0.24vw + 16px, 19px);
+    scroll-behavior: smooth;
+  }
+
+  * {
+    scrollbar-color: #1f3a8a #05070f;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-[#0c1118] text-zinc-100 antialiased;
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    background-image:
+      radial-gradient(900px 360px at 8% -6%, var(--page-radial-a), transparent 62%),
+      radial-gradient(700px 320px at 90% -8%, var(--page-radial-b), transparent 58%),
+      linear-gradient(180deg, var(--page-bg-1) 0%, var(--page-bg-2) 44%, var(--page-bg-3) 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Fraunces", "Plus Jakarta Sans", serif;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  code,
+  pre {
+    font-family: "IBM Plex Mono", "Cascadia Code", monospace;
+  }
+
+  ::selection {
+    background: var(--selection-bg);
+    color: #e5f0ff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .app-shell-glow {
+    background:
+      radial-gradient(circle at 15% 20%, var(--shell-glow-a), transparent 44%),
+      radial-gradient(circle at 80% 12%, var(--shell-glow-b), transparent 36%);
+  }
+
+  .dashboard-shell {
+    @apply w-full px-3 sm:px-4 lg:px-6 2xl:px-10;
+  }
+
+  .glass-panel {
+    @apply rounded-xl border backdrop-blur;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .theme-surface-header {
+    border-color: var(--chrome-border);
+    background: var(--chrome-bg);
+  }
+
+  .theme-icon-button {
+    background: var(--icon-button-bg);
+    border-color: var(--icon-button-border);
+  }
+
+  .theme-icon-button:hover {
+    border-color: var(--icon-button-border-hover);
+  }
+
+  .theme-floating-button {
+    background: var(--floating-bg);
+    border-color: var(--floating-border);
+  }
+
+  .theme-floating-button:hover {
+    background: var(--floating-bg-hover);
+    border-color: var(--floating-border-hover);
+  }
+
+  .theme-footer {
+    border-color: var(--footer-border);
+    background: var(--footer-bg);
+  }
+
+  .panel-title {
+    @apply text-sm font-semibold tracking-[0.02em] text-zinc-300;
+  }
+
+  .mono-caption {
+    @apply font-mono text-[11px] uppercase tracking-[0.08em] text-zinc-500;
+  }
+
+  .top-divider {
+    position: relative;
+  }
+
+  .top-divider::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.08), transparent 45%, rgba(148, 163, 184, 0.08));
+    opacity: 0.65;
+    pointer-events: none;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 1px;
+  }
+
+  .section-reveal {
+    animation: section-fade-up 480ms ease-out both;
+  }
+
+  .tech-marquee-mask {
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  .marquee-track {
+    animation: tech-marquee-scroll 44s linear infinite;
+    will-change: transform;
+  }
+
+  .tech-marquee-strip:hover .marquee-track,
+  .tech-marquee-strip:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes tech-marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
+
+  @keyframes section-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

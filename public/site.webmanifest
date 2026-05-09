@@ -1,0 +1,16 @@
+{
+  "name": "Yampi Dev Roadmap",
+  "short_name": "Dev Roadmap",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#07080c",
+  "theme_color": "#22d3ee",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

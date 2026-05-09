@@ -1,0 +1,6 @@
+{
+  "name": "Yampi",
+  "title": "Programador web",
+  "summary": "De microsistemas y soporte técnico a desarrollo web moderno, automatización y LLM workflows.",
+  "stack": ["React", "TypeScript", "Supabase", "Gemini CLI", "n8n"]
+}
