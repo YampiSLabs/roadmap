@@ -14,8 +14,8 @@ Web estatica hecha con React + Vite + TypeScript + Tailwind para mostrar la evol
 
 La app esta preparada para publicarse bajo el repo `json` con base de Vite:
 
-- `base: "/json/"` en `vite.config.ts`
-- URL publica esperada: `https://cdryampi.github.io/json/`
+- `base: "/roadmap/"` en `vite.config.ts`
+- URL publica esperada: `https://yampislabs.github.io/roadmap/`
 
 ## SEO & metadata
 
