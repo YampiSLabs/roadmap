@@ -2,6 +2,8 @@
 
 Web estatica hecha con React + Vite + TypeScript + Tailwind para mostrar la evolucion tecnica de Yampi: de soporte IT y microsistemas a desarrollo web, automatizacion, QA y flujos con LLM.
 
+Prueba de push desde la cuenta secundaria del agente.
+
 ## Scripts
 
 - `npm install`
